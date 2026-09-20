@@ -45,7 +45,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -74,9 +74,10 @@ ul {
 
 /* ── Utility ── */
 .container {
-  width: min(1200px, 100%);
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 48px;
 }
 
 .section-label {
@@ -115,35 +116,36 @@ ul {
 }
 
 /* ── Scroll Animations ── */
-.reveal {
+/* Content is VISIBLE by default — JS opt-in enables the animation */
+.js-reveal-ready .reveal {
   opacity: 0;
   transform: translateY(32px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal.visible {
+.js-reveal-ready .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.reveal-left {
+.js-reveal-ready .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal-left.visible {
+.js-reveal-ready .reveal-left.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
-.reveal-right {
+.js-reveal-ready .reveal-right {
   opacity: 0;
   transform: translateX(40px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal-right.visible {
+.js-reveal-ready .reveal-right.visible {
   opacity: 1;
   transform: translateX(0);
 }
@@ -161,7 +163,7 @@ ul {
   border-top: 16px solid var(--purple-brand);
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(106, 0, 87, 0.08);
@@ -179,6 +181,8 @@ ul {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0 48px;
+  max-width: 100%;
 }
 
 /* Logo */
@@ -1115,9 +1119,14 @@ ul {
    10. FOOTER
 ══════════════════════════════ */
 footer {
-  background: var(--white);
-  border-top: 1px solid rgba(106, 0, 87, 0.1);
-  padding: 80px 0 0;
+  background: #4E0441;
+  border-top: none;
+  padding: 64px 0 0;
+}
+
+footer .container {
+  padding: 0 48px;
+  max-width: 100%;
 }
 
 .footer-grid {
@@ -1133,7 +1142,7 @@ footer {
 
 .footer-tagline {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  color: #ffffff;
   line-height: 1.7;
   margin-bottom: 24px;
   max-width: 260px;
@@ -1148,11 +1157,11 @@ footer {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1.5px solid var(--border-light);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--purple-brand);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
   transition: var(--transition);
   text-decoration: none;
@@ -1169,7 +1178,7 @@ footer {
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--slate-dark);
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -1179,12 +1188,12 @@ footer {
 
 .footer-col ul li a {
   font-size: 0.875rem;
-  color: var(--text-body);
+  color: #ffffff;
   transition: color 0.25s;
 }
 
 .footer-col ul li a:hover {
-  color: var(--purple-brand);
+  color: var(--gold-accent);
 }
 
 .footer-contact-item {
@@ -1193,7 +1202,7 @@ footer {
   align-items: flex-start;
   margin-bottom: 14px;
   font-size: 0.875rem;
-  color: var(--text-body);
+  color: #ffffff;
 }
 
 .footer-contact-item span:first-child {
@@ -1204,7 +1213,7 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(106, 0, 87, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 24px 0;
   display: flex;
   align-items: center;
@@ -1215,7 +1224,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: #ffffff;
 }
 
 .footer-bottom-line {
@@ -1225,12 +1234,12 @@ footer {
 
 .footer-bottom-line a {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: #ffffff;
   transition: color 0.25s;
 }
 
 .footer-bottom-line a:hover {
-  color: var(--purple-brand);
+  color: var(--gold-accent);
 }
 
 /* WhatsApp Floating Button */

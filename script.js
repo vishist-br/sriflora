@@ -1,21 +1,10 @@
 /* Sri Flora JavaScript */
 'use strict';
 
-// ── Dark / Light Mode Toggle ──
+// ── Light Mode Only ──
 const html = document.documentElement;
-const themeToggle = document.getElementById('theme-toggle');
-
-// Apply saved preference immediately (no flash)
-const savedTheme = localStorage.getItem('sf-theme') || 'light';
-html.setAttribute('data-theme', savedTheme);
-
-themeToggle.addEventListener('click', () => {
-  const current = html.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('sf-theme', next);
-  themeToggle.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-});
+html.setAttribute('data-theme', 'light');
+localStorage.removeItem('sf-theme');
 
 // ── Scroll: Navbar shadow ──
 const navbar = document.getElementById('navbar');
@@ -39,6 +28,8 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
 });
 
 // ── Scroll Reveal ──
+// Only hide .reveal elements once JS is confirmed running
+document.documentElement.classList.add('js-reveal-ready');
 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
