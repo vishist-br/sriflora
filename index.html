@@ -4,46 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sri Floras — Premium Floriculture | Young Plants, Cut Flowers & Pot Plants</title>
+  <title>Sri Flora — Premium Floriculture | Young Plants, Cut Flowers &amp; Pot Plants</title>
   <meta name="description"
     content="Sri Flora is Karnataka's premier floriculture farm based in Kanakapura. We supply Young Plants, Cut Flowers, and Pot Plants to nurseries, decorators, and farmers across India." />
   <meta name="keywords"
     content="Sri Flora, floriculture, young plants, cut flowers, pot plants, Kanakapura, Karnataka, flower farm India" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#6A0057" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Sri Flora — Premium Floriculture" />
   <meta property="og:description"
-    content="Cultivating Beauty, Delivering Excellence. Premium flower farm in Kanakapura, Karnataka." />
+    content="Rooted in Nature. Driven by Excellence. Premium flower farm in Kanakapura, Karnataka." />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://sriflora.in" />
-  <link rel="stylesheet" href="styles.css?v=53" />
+  <link rel="stylesheet" href="styles.css?v=91" />
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
 
+
+
   <!-- ══ STICKY NAVBAR ══ -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <!-- Logo -->
       <a href="#hero" class="logo" aria-label="Sri Flora Home">
-        <!-- Light mode logo (default) -->
-        <img src="logo-light.png" alt="Sri Flora — Young Plants, Cut Flowers, Pot Plants"
-          class="logo-img logo-img--light" />
-        <!-- Dark mode logo (white text via CSS filter) -->
-        <img src="logo-light.png" alt="Sri Flora — Young Plants, Cut Flowers, Pot Plants"
-          class="logo-img logo-img--dark" aria-hidden="true" />
+        <img src="logo-light.png" alt="Sri Flora — Young Plants, Cut Flowers, Pot Plants" class="logo-img" />
       </a>
 
       <!-- Desktop Nav Links -->
       <ul class="nav-links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#why-us">Why Us</a></li>
-        <li><a href="#partners">Partners</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="about.html">About</a></li>
+        <!-- Products Dropdown -->
+        <li class="nav-dropdown">
+          <a href="#products" class="nav-dropdown-toggle">
+            Products <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+          </a>
+          <ul class="nav-dropdown-menu" role="list">
+            <li><a href="young-plants.html"><i class="fa-solid fa-seedling"></i> Young Plants</a></li>
+            <li><a href="pot-plants.html"><i class="fa-solid fa-leaf"></i> Pot Plants</a></li>
+            <li><a href="cut-flowers.html"><i class="fa-solid fa-fan"></i> Cut Flowers</a></li>
+          </ul>
+        </li>
+        <li><a href="#technology">Technology</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -59,11 +63,18 @@
 
   <!-- Mobile Nav Drawer -->
   <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#partners">Partners</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="about.html">About</a>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-toggle" id="mobile-products-toggle">
+        Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="mobile-nav-submenu" id="mobile-products-submenu">
+        <a href="young-plants.html">Young Plants</a>
+        <a href="pot-plants.html">Pot Plants</a>
+        <a href="cut-flowers.html">Cut Flowers</a>
+      </div>
+    </div>
+    <a href="#technology">Technology</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="btn-nav">Get In Touch</a>
   </div>
@@ -73,11 +84,10 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-logo">
-        <!-- Hero logo: always white version on the dark overlay -->
         <img src="logo-light.png" alt="Sri Flora" class="hero-logo-img" />
       </div>
       <p class="hero-tagline">Young Plants &nbsp;|&nbsp; Cut Flowers &nbsp;|&nbsp; Pot Plants</p>
-      <p class="hero-subtitle">Cultivating Beauty, Delivering Excellence</p>
+      <p class="hero-subtitle">Rooted in Nature. Driven by Excellence.</p>
       <a href="#products" class="btn-hero">
         Explore Collections
         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
@@ -86,61 +96,37 @@
     <div class="hero-scroll" aria-hidden="true">Scroll</div>
   </section>
 
-  <!-- ══ STATS BAR ══ -->
-  <section id="stats-bar" aria-label="Key statistics">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <div class="stat-number"><span data-count="15" data-suffix="+">0+</span></div>
-          <div class="stat-label">Years of Excellence</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number"><span data-count="500" data-suffix="+">0+</span></div>
-          <div class="stat-label">Plant Varieties</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number"><span data-count="50" data-suffix="+">0+</span></div>
-          <div class="stat-label">Happy Partners</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number"><span data-count="100" data-suffix="%">0%</span></div>
-          <div class="stat-label">Quality Assured</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ══ ABOUT US ══ -->
   <section id="about" aria-labelledby="about-heading">
     <div class="container">
       <div class="about-grid">
         <!-- Image -->
-        <div class="about-image-wrap reveal-left">
-          <img class="about-image-main" src="https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?w=800&q=80"
-            alt="Sri Flora greenhouse interior with lush green plants and flowers" loading="lazy" />
-          <div class="about-image-badge" aria-hidden="true">
-            <strong>15+</strong>
-            <span>Years<br>Growing</span>
-          </div>
+        <div class="about-image-wrap-left">
+          <img class="lazy about-image-main" alt="Sri Flora greenhouse interior with lush green plants and flowers" /
+            data-src="photos/Products/Cut flower/Hydrangea/DSC02443.jpg">
         </div>
 
         <!-- Text -->
-        <div class="about-text reveal-right">
-          <span class="section-label">Our Story</span>
+        <div class="about-text-right">
+          <span class="section-label">About Us</span>
           <h2 class="section-title" id="about-heading">
-            Cultivating<br><span>Excellence</span>
+            Rooted in Nature.<br><span>Driven by Excellence.</span>
           </h2>
           <div class="gold-line left"></div>
           <p class="about-description">
-            Founded in Kanakapura, Karnataka, Sri Flora has been the trusted source of premium floriculture products for
-            over 15 years. Nestled in the fertile lands of Bantanala, our farm spans acres of vibrant greenhouses and
-            open fields — home to over 500 varieties of plants and flowers.
+            At Sri Flora, we believe that everything begins with nature. Nature moves in a continuous circle — from a
+            seed to a plant, from a plant to a flower, and from every bloom to new possibilities.
           </p>
           <p class="about-description">
-            We serve nurseries, event decorators, and farmers across South India, maintaining uncompromising standards
-            from seed to delivery. Our mission is simple: grow the most beautiful, healthy plants and deliver them to
-            partners who share our passion for nature.
+            We see Sri Flora as part of this circle: deeply rooted in nature, driven by purpose, and guided by a
+            commitment to excellence. It shapes the varieties we choose, the planting material we develop, the way we
+            grow, and the value we create for every grower we work with.
           </p>
+          <div class="about-cta-row">
+            <a href="about.html" class="btn-about-more">
+              View More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
           <div class="about-stats">
             <div class="stat-pill">
               <strong><span data-count="15" data-suffix="+">15+</span></strong>
@@ -163,196 +149,166 @@
   <!-- ══ PRODUCT CATEGORIES ══ -->
   <section id="products" aria-labelledby="products-heading">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header">
         <span class="section-label">Our Collections</span>
         <h2 class="section-title" id="products-heading">What We Grow</h2>
         <div class="gold-line"></div>
       </div>
-      <div class="products-grid stagger-children">
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80"
-            alt="Young seedling plants in trays — fresh green sprouts ready for nurseries" loading="lazy" />
+      <div class="products-grid-3">
+
+        <!-- Young Plants -->
+        <a href="young-plants.html" class="product-card" aria-label="Explore Young Plants gallery">
+          <img alt="Gypsophila young plants in trays" / class="lazy"
+            data-src="photos/Products/Young plants/Gypso young plants /DSC02415.jpg">
           <div class="product-overlay">
             <div class="product-info">
               <h3>Young Plants</h3>
-              <p>Premium seedlings & plugs</p>
+              <p>Gypsophila &amp; Gerbera</p>
               <div class="product-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
           </div>
-        </article>
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1487530811015-780780d79614?w=600&q=80"
-            alt="Fresh cut flowers including roses, gerberas and lilies for event decorators" loading="lazy" />
-          <div class="product-overlay">
-            <div class="product-info">
-              <h3>Cut Flowers</h3>
-              <p>Fresh roses, gerberas & lilies</p>
-              <div class="product-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
-            </div>
-          </div>
-        </article>
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=600&q=80"
-            alt="Beautiful potted plants including anthuriums and indoor foliage plants" loading="lazy" />
+        </a>
+
+        <!-- Pot Plants -->
+        <a href="pot-plants.html" class="product-card" aria-label="Explore Pot Plants gallery">
+          <img alt="Poinsettia pot plants in vibrant red" / class="lazy"
+            data-src="photos/Products/Pot plants/Poinsettia /IMG_5641.jpg">
           <div class="product-overlay">
             <div class="product-info">
               <h3>Pot Plants</h3>
-              <p>Indoor & outdoor potted varieties</p>
+              <p>Poinsettia &amp; Gerbera</p>
               <div class="product-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
           </div>
-        </article>
-        <article class="product-card">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
-            alt="Seasonal flowers including marigolds and chrysanthemums for festivals" loading="lazy" />
+        </a>
+
+        <!-- Cut Flowers -->
+        <a href="cut-flowers.html" class="product-card" aria-label="Explore Cut Flowers gallery">
+          <img alt="Fresh cut hydrangea flowers" / class="lazy"
+            data-src="photos/Products/Cut flower/Hydrangea/PHOTO-2026-09-26-16-24-59.jpg">
           <div class="product-overlay">
             <div class="product-info">
-              <h3>Seasonal Specials</h3>
-              <p>Marigolds, chrysanthemums & more</p>
+              <h3>Cut Flowers</h3>
+              <p>Hydrangea, Lisianthus &amp; more</p>
               <div class="product-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
           </div>
-        </article>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- ══ WHY CHOOSE US ══ -->
-  <section id="why-us" aria-labelledby="why-heading">
+  <!-- ══ TECHNOLOGY ══ -->
+  <section id="technology" aria-labelledby="technology-heading">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Our Promise</span>
-        <h2 class="section-title" id="why-heading">Why Choose Sri Flora</h2>
+      <div class="section-header">
+        <span class="section-label">Our Technology</span>
+        <h2 class="section-title" id="technology-heading">Precision Growing. <span>Smarter Systems.</span></h2>
         <div class="gold-line"></div>
+        <p class="technology-intro">At Sri Flora, technology is more than infrastructure — it is an essential part of
+          our commitment to growing better plants and building a smarter future for floriculture.</p>
       </div>
-      <div class="why-grid stagger-children">
-        <div class="why-card">
-          <div class="why-icon">🌿</div>
-          <h3>Farm Fresh</h3>
-          <p>All plants are grown and harvested fresh from our own Karnataka farm — zero middlemen, maximum freshness
-            guaranteed.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">🏅</div>
-          <h3>Quality Assured</h3>
-          <p>Every batch undergoes rigorous quality checks to ensure you receive only the healthiest, most vibrant
-            plants and flowers.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">🚚</div>
-          <h3>Reliable Delivery</h3>
-          <p>Timely, temperature-controlled delivery across South India. We ensure your orders arrive in pristine
-            condition.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon">🤝</div>
-          <h3>Partner Support</h3>
-          <p>Dedicated relationship managers for every client. We grow together — offering flexible terms and seasonal
-            planning assistance.</p>
+
+      <!-- Vanilla JS Auto-Scroll Carousel with Manual Controls -->
+      <div class="tech-carousel-wrapper" aria-label="Technology showcase carousel" id="tech-carousel">
+        <button class="tech-nav prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="tech-nav next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="tech-carousel-track" id="tech-carousel-track">
+
+          <div class="tech-slide">
+            <img alt="Fan and Pad Cooling System" / class="lazy" data-src="photos/Technology/Fan and pad/DSC02781.jpg">
+            <div class="tech-slide-label">Fan &amp; Pad Cooling</div>
+          </div>
+          <div class="tech-slide">
+            <img alt="RO Water Treatment Plant" / class="lazy"
+              data-src="photos/Technology/Ro water treatment /DSC02931.jpg">
+            <div class="tech-slide-label">RO Water Treatment</div>
+          </div>
+          <div class="tech-slide">
+            <img alt="Cold Room Pre-Cooling Facility" / class="lazy"
+              data-src="photos/Technology/Cold room/DSC02872.jpg">
+            <div class="tech-slide-label">Cold Room &amp; Pre-Cooling</div>
+          </div>
+          <div class="tech-slide">
+            <img alt="Rainwater Harvesting System" / class="lazy"
+              data-src="photos/Technology/Rainwater harvesting /DSC02926.jpg">
+            <div class="tech-slide-label">Rainwater Harvesting</div>
+          </div>
+          <div class="tech-slide">
+            <img alt="Plug Machine for Young Plants" / class="lazy"
+              data-src="photos/Technology/Plug machine/DSC02742.jpg">
+            <div class="tech-slide-label">Plug Machine</div>
+          </div>
+          <div class="tech-slide">
+            <img alt="Automated Irrigation and Fertigation" / class="lazy"
+              data-src="photos/Technology/Automated irrigation and fertigation /IMG_9814.JPG">
+            <div class="tech-slide-label">Automated Irrigation &amp; Fertigation</div>
+          </div>
+          <div class="tech-slide">
+            <img alt="Solar Energy Panels" / class="lazy" data-src="photos/Technology/Solar energy/IMG_0199.JPG">
+            <div class="tech-slide-label">Solar Energy</div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ TESTIMONIALS ══ -->
-  <section id="testimonials" aria-labelledby="testimonials-heading">
+  <!-- ══ GALLERY (Technology Extension) ══ -->
+  <section id="gallery-cards" aria-labelledby="gallery-cards-heading">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Client Stories</span>
-        <h2 class="section-title" id="testimonials-heading">What Our Clients Say</h2>
+      <div class="section-header">
+        <span class="section-label">A Closer Look</span>
+        <h2 class="section-title" id="gallery-cards-heading">Explore Our <span>Farm</span></h2>
         <div class="gold-line"></div>
       </div>
-      <div class="testimonials-grid stagger-children">
-        <article class="testimonial-card">
-          <span class="quote-mark">"</span>
-          <p class="testimonial-text">Sri Flora has transformed how we source plants. The quality of their young plants
-            is unmatched — healthy roots, vibrant color, and consistent supply. Our nursery has grown 40% since
-            partnering with them.</p>
-          <div class="testimonial-divider"></div>
-          <div class="testimonial-author">
-            <div class="author-avatar">R</div>
-            <div class="author-info">
-              <strong>Rajesh Kumar</strong>
-              <span>Nursery Owner, Bengaluru</span>
-              <div class="stars" aria-label="5 out of 5 stars">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
+      
+      <div class="gallery-cards-grid">
+        <!-- Card 1: Drone Videos -->
+        <a href="drone.html" class="gallery-action-card">
+          <img class="lazy" data-src="photos/Gallery/web/DJI_20260910081543_0071_D.JPG" alt="Drone View of Sri Flora">
+          <div class="gallery-action-overlay">
+            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+            <h3>Aerial Perspectives</h3>
+            <p>Watch Drone Tours</p>
           </div>
-        </article>
-        <article class="testimonial-card">
-          <span class="quote-mark">"</span>
-          <p class="testimonial-text">As a wedding decorator, I need fresh, premium flowers every single week. Sri Flora
-            has never let me down. Their cut flowers last longer and look more beautiful than anything I've sourced
-            elsewhere.</p>
-          <div class="testimonial-divider"></div>
-          <div class="testimonial-author">
-            <div class="author-avatar">P</div>
-            <div class="author-info">
-              <strong>Priya Sharma</strong>
-              <span>Event Decorator, Mysore</span>
-              <div class="stars" aria-label="5 out of 5 stars">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
+        </a>
+        
+        <!-- Card 2: Farm Images -->
+        <a href="gallery.html#photos" class="gallery-action-card">
+          <img class="lazy" data-src="photos/Gallery/web/DSC02373.JPG" alt="Life at Sri Flora Farm">
+          <div class="gallery-action-overlay">
+            <div class="play-icon"><i class="fa-solid fa-images"></i></div>
+            <h3>Life at the Farm</h3>
+            <p>View Photo Gallery</p>
           </div>
-        </article>
-        <article class="testimonial-card">
-          <span class="quote-mark">"</span>
-          <p class="testimonial-text">Reliable supply chain and consistent quality make Sri Flora a trusted partner for
-            our farm operations. Their seasonal marigolds are exceptional — perfect for the festival season every year.
-          </p>
-          <div class="testimonial-divider"></div>
-          <div class="testimonial-author">
-            <div class="author-avatar">V</div>
-            <div class="author-info">
-              <strong>Vikram Reddy</strong>
-              <span>Farmer, Kanakapura</span>
-              <div class="stars" aria-label="5 out of 5 stars">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-          </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ══ PARTNERS ══ -->
-  <section id="partners" aria-labelledby="partners-heading">
-    <div class="container">
-      <div class="partners-label reveal">
-        <span class="section-label">Trusted By</span>
-        <h2 class="section-title" id="partners-heading">Our Growing Network</h2>
-        <div class="gold-line"></div>
-        <p>Join 50+ nurseries, decorators and farms who trust Sri Flora for their floral needs</p>
-      </div>
-      <div class="partners-row reveal">
-        <div class="partner-logo">🌺 NurseryPro</div>
-        <div class="partner-logo">🌸 FloraDecor</div>
-        <div class="partner-logo">🌻 GreenEarth</div>
-        <div class="partner-logo">🌹 BloomWorks</div>
-        <div class="partner-logo">🌿 FarmFresh</div>
-        <div class="partner-logo">🪴 GardenKing</div>
-      </div>
+  <!-- Video Modal -->
+  <div id="video-modal" class="video-modal" aria-hidden="true">
+    <button class="video-modal-close" aria-label="Close video"><i class="fa-solid fa-xmark"></i></button>
+    <div class="video-modal-content">
+      <div class="video-loader" id="video-loader"><div class="spinner"></div></div>
+      <div id="video-container"></div>
     </div>
-  </section>
+  </div>
+
+
 
   <!-- ══ CONTACT US ══ -->
   <section id="contact" aria-labelledby="contact-heading">
     <div class="container">
-      <div class="section-header reveal">
+      <div class="section-header">
         <span class="section-label">Reach Us</span>
         <h2 class="section-title" id="contact-heading">Get In Touch</h2>
         <div class="gold-line"></div>
       </div>
-      <div class="contact-grid stagger-children">
+      <div class="contact-grid">
         <!-- WhatsApp -->
         <div class="contact-card">
           <div class="contact-icon-wrap green">
@@ -361,8 +317,9 @@
           <h3>WhatsApp Us</h3>
           <p>Chat with us directly for quick inquiries, pricing, and bulk orders. We typically respond within minutes.
           </p>
-          <p style="font-weight:600;color:var(--slate-dark);margin-bottom:24px;">+91 98765 43210</p>
-          <a href="https://wa.me/919876543210?text=Hi%20Sri%20Flora%2C%20I%20would%20like%20to%20inquire%20about%20your%20products."
+          <p style="font-weight:600;color:var(--slate-dark);margin-bottom:8px;">+91 81971 91101</p>
+          <p style="font-weight:600;color:var(--slate-dark);margin-bottom:24px;">+91 97411 77666</p>
+          <a href="https://wa.me/918197191101?text=Hi%20Sri%20Flora%2C%20I%20would%20like%20to%20inquire%20about%20your%20products."
             class="btn-contact green" target="_blank" rel="noopener noreferrer"
             aria-label="Chat with Sri Flora on WhatsApp">
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Start Chat
@@ -376,8 +333,8 @@
           </div>
           <h3>Email Us</h3>
           <p>Send us detailed inquiries, partnership proposals, or bulk order requests. We respond within 24 hours.</p>
-          <p style="font-weight:600;color:var(--slate-dark);margin-bottom:24px;">info@sriflora.in</p>
-          <a href="mailto:info@sriflora.in?subject=Inquiry%20from%20Sri%20Flora%20Website" class="btn-contact gold"
+          <p style="font-weight:600;color:var(--slate-dark);margin-bottom:24px;">admin@sriflora.com</p>
+          <a href="mailto:admin@sriflora.com?subject=Inquiry%20from%20Sri%20Flora%20Website" class="btn-contact gold"
             aria-label="Send email to Sri Flora">
             <i class="fa-regular fa-envelope" aria-hidden="true"></i> Send Email
           </a>
@@ -392,7 +349,7 @@
           <h3>Visit Our Farm</h3>
           <div class="map-embed">
             <iframe src="https://maps.google.com/maps?q=HHJG%2BW89+Kanakapura+Bantanala+Karnataka+562121&output=embed"
-              title="Sri Flora farm location on Google Maps" loading="lazy" allowfullscreen
+              title="Sri Flora farm location on Google Maps" loading="eager" allowfullscreen
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <a href="https://share.google/vW7vSW3U2p8hIddT9" target="_blank" rel="noopener noreferrer"
@@ -411,14 +368,17 @@
         <!-- Brand -->
         <div class="footer-brand">
           <a href="#hero" class="logo" aria-label="Sri Flora Home">
-            <img src="logo-light.png" alt="Sri Flora" class="logo-img" />
+            <img src="logo-light.png" alt="Sri Flora" class="logo-img" style="filter:brightness(0) invert(1);" />
           </a>
-          <p class="footer-tagline">Cultivating beauty from the heart of Karnataka since 2010. Premium young plants, cut flowers, and pot plants for nurseries, decorators, and farmers.</p>
+          <p class="footer-tagline">Rooted in nature, driven by excellence. Premium young plants, cut flowers, and pot
+            plants from Kanakapura, Karnataka.</p>
           <div class="social-row">
-            <a href="#" class="social-btn" aria-label="Sri Flora on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" class="social-btn" aria-label="Sri Flora on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="https://wa.me/919448282112" class="social-btn" aria-label="Sri Flora on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="mailto:info@sriflora.in" class="social-btn" aria-label="Email Sri Flora"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/sriflora" class="social-btn" aria-label="Sri Flora on Instagram"
+              target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/918197191101" class="social-btn" aria-label="Sri Flora on WhatsApp" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:admin@sriflora.com" class="social-btn" aria-label="Email Sri Flora"><i
+                class="fa-regular fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -426,11 +386,10 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul role="list">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#products">Our Premium Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#products">Our Products</a></li>
             <li><a href="#technology">Our Technology</a></li>
-            <li><a href="#collaboration">Partnering with the Best</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#why-us">Why Sri Flora</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -439,9 +398,9 @@
         <div class="footer-col">
           <h4>What We Grow</h4>
           <ul role="list">
-            <li><a href="#products">Young Plants</a></li>
-            <li><a href="#products">Cut Flowers</a></li>
-            <li><a href="#products">Pot Plants</a></li>
+            <li><a href="young-plants.html">Young Plants</a></li>
+            <li><a href="cut-flowers.html">Cut Flowers</a></li>
+            <li><a href="pot-plants.html">Pot Plants</a></li>
           </ul>
         </div>
 
@@ -453,12 +412,16 @@
             <span>HHJG+W89, Kanakapura, Bantanala, Karnataka 562121</span>
           </div>
           <div class="footer-contact-item">
-            <span><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
-            <span>+91 94482 82112</span>
+            <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+            <span>+91 81971 91101</span>
+          </div>
+          <div class="footer-contact-item">
+            <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+            <span>+91 97411 77666</span>
           </div>
           <div class="footer-contact-item">
             <span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
-            <span>info@sriflora.in</span>
+            <span>admin@sriflora.com</span>
           </div>
         </div>
       </div>
@@ -476,7 +439,7 @@
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919876543210?text=Hi%20Sri%20Flora%2C%20I%20am%20interested%20in%20your%20products."
+  <a href="https://wa.me/918197191101?text=Hi%20Sri%20Flora%2C%20I%20am%20interested%20in%20your%20products."
     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Sri Flora on WhatsApp">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
@@ -486,7 +449,9 @@
     <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  <script src="script.js?v=50"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+  <script src="script.js?v=86"></script>
 </body>
 
 </html>
