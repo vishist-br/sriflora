@@ -1,0 +1,8 @@
+.DS_Store
+*.MP4
+*.mp4
+*.DNG
+*.dng
+photos/Gallery/*.JPG
+photos/Gallery/*.jpg
+photos/Gallery/*.jpeg
