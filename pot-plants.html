@@ -9,13 +9,13 @@
     content="Vibrant Poinsettia and Gerbera pot plants from Sri Flora. Premium quality indoor and outdoor potted plants grown in Kanakapura, Karnataka." />
   <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://sriflora.in/pot-plants.html" />
-  <link rel="stylesheet" href="styles.css?v=88" />
+  <link rel="stylesheet" href="styles.css?v=92" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
 
-  
+
 
   <!-- ══ NAVBAR ══ -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
@@ -24,7 +24,16 @@
         <img src="logo-light.png" alt="Sri Flora" class="logo-img" />
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="about.html">About</a></li>
+        <li class="nav-dropdown">
+          <a href="about.html" class="nav-dropdown-toggle">
+            About <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
+          </a>
+          <ul class="nav-dropdown-menu" role="list">
+            <li><a href="about.html#mission-vision">Mission & Vision</a></li>
+            <li><a href="about.html#our-story">Our Story</a></li>
+            <li><a href="about.html#our-team">Our Team</a></li>
+          </ul>
+        </li>
         <li class="nav-dropdown">
           <a href="index.html#products" class="nav-dropdown-toggle" style="color:var(--purple-brand);">
             Products <i class="fa-solid fa-chevron-down nav-chevron" aria-hidden="true"></i>
@@ -36,6 +45,7 @@
           </ul>
         </li>
         <li><a href="index.html#technology">Technology</a></li>
+        <li><a href="index.html#gallery-cards">Gallery</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:12px;">
@@ -49,7 +59,16 @@
 
   <!-- Mobile Nav Drawer -->
   <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
-    <a href="about.html">About</a>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-toggle" id="mobile-about-toggle">
+        About <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="mobile-nav-submenu" id="mobile-about-submenu">
+        <a href="about.html#mission-vision">Mission & Vision</a>
+        <a href="about.html#our-story">Our Story</a>
+        <a href="about.html#our-team">Our Team</a>
+      </div>
+    </div>
     <div class="mobile-nav-group">
       <button class="mobile-nav-group-toggle" id="mobile-products-toggle">
         Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
@@ -61,6 +80,7 @@
       </div>
     </div>
     <a href="index.html#technology">Technology</a>
+    <a href="index.html#gallery-cards">Gallery</a>
     <a href="index.html#contact">Contact</a>
     <a href="index.html#contact" class="btn-nav">Get In Touch</a>
   </div>
@@ -76,9 +96,9 @@
         <span>Pot Plants</span>
       </div>
       <span class="section-label">Our Products</span>
-      <h1 class="section-title" style="color:var(--white);font-size:clamp(2.2rem,5vw,3.5rem);">Pot <span style="color:var(--gold-accent);">Plants</span></h1>
+      <h1 class="section-title" style="color:var(--white);font-size:clamp(2.2rem,5vw,3.5rem);">Pot <span
+          style="color:var(--gold-accent);">Plants</span></h1>
       <div class="gold-line" style="margin:16px auto 24px;"></div>
-      <p>Beautiful and vibrant potted plants — bringing colour and life indoors and outdoors.</p>
     </div>
   </section>
 
@@ -92,55 +112,68 @@
         <div class="gallery-grid">
 
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Vibrant red Poinsettia pot plant"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /IMG_5641.jpg" >
+            <img alt="Vibrant red Poinsettia pot plant" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /IMG_5641.jpg">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia in bloom"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /IMG_6233.JPG" >
+            <img alt="Poinsettia in bloom" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /IMG_6233.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia pot plant"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /bcd5366f-9a78-4421-a70d-35476617a8ed.JPG" >
+            <img alt="Poinsettia pot plant" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /bcd5366f-9a78-4421-a70d-35476617a8ed.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia plant variety"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /694f3193-206e-4665-af1c-4d2dd5161316.JPG" >
+            <img alt="Poinsettia plant variety" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /694f3193-206e-4665-af1c-4d2dd5161316.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia premium variety"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /b5e8222d-12f1-4e8c-8874-e6ebbde2ceeb.JPG" >
+            <img alt="Poinsettia premium variety" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /b5e8222d-12f1-4e8c-8874-e6ebbde2ceeb.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia pot plant close-up"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /3617bbd7-57e8-4207-ba68-d0f22ad75012.JPG" >
+            <img alt="Poinsettia pot plant close-up" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /3617bbd7-57e8-4207-ba68-d0f22ad75012.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia plant in greenhouse"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /76e267dd-60e8-4349-8996-3bcbcfb4b0b0.JPG" >
+            <img alt="Poinsettia plant in greenhouse" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /76e267dd-60e8-4349-8996-3bcbcfb4b0b0.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia batch ready for dispatch"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /96d976f0-540e-42a3-a6c0-f500368c9966.JPG" >
+            <img alt="Poinsettia batch ready for dispatch" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /96d976f0-540e-42a3-a6c0-f500368c9966.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia plant display"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /e8aa425a-66c8-46a2-9085-635ff8b3cf9e.JPG" >
+            <img alt="Poinsettia plant display" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /e8aa425a-66c8-46a2-9085-635ff8b3cf9e.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia variety"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /9dcd6c97-1eb6-4b2c-a76d-304198bad201.JPG" >
+            <img alt="Poinsettia variety" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /9dcd6c97-1eb6-4b2c-a76d-304198bad201.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia plant collection"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /5ae7bb85-c4eb-4aa3-80e5-7e7026069c31.JPG" >
+            <img alt="Poinsettia plant collection" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /5ae7bb85-c4eb-4aa3-80e5-7e7026069c31.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia beautifully grown"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /d2a8dc5a-a7db-495e-a359-3973993f879c.JPG" >
+            <img alt="Poinsettia beautifully grown" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /d2a8dc5a-a7db-495e-a359-3973993f879c.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Poinsettia image">
-            <img  alt="Poinsettia pot plant"   / class="lazy" data-src="photos/Products/Pot plants/Poinsettia /d7bf94e5-b58a-4cbd-8f47-9f3b486bc866.JPG" >
+            <img alt="Poinsettia pot plant" / class="lazy"
+              data-src="photos/Products/Pot plants/Poinsettia /d7bf94e5-b58a-4cbd-8f47-9f3b486bc866.JPG">
             <div class="gallery-item-label">Poinsettia</div>
           </div>
 
@@ -153,15 +186,18 @@
         <div class="gallery-grid">
 
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Gerbera image">
-            <img  alt="Gerbera pot plant in bloom"   / class="lazy" data-src="photos/Products/Pot plants/Gerbera/DSC02585 2.jpg" >
+            <img alt="Gerbera pot plant in bloom" / class="lazy"
+              data-src="photos/Products/Pot plants/Gerbera/DSC02585 2.jpg">
             <div class="gallery-item-label">Gerbera</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Gerbera image">
-            <img  alt="Colourful Gerbera daisy pot plant"   / class="lazy" data-src="photos/Products/Pot plants/Gerbera/DSC02581 2.jpg" >
+            <img alt="Colourful Gerbera daisy pot plant" / class="lazy"
+              data-src="photos/Products/Pot plants/Gerbera/DSC02581 2.jpg">
             <div class="gallery-item-label">Gerbera</div>
           </div>
           <div class="gallery-item" tabindex="0" role="button" aria-label="View Gerbera image">
-            <img  alt="Gerbera pot plant collection"   / class="lazy" data-src="photos/Products/Pot plants/Gerbera/DSC02584.jpg" >
+            <img alt="Gerbera pot plant collection" / class="lazy"
+              data-src="photos/Products/Pot plants/Gerbera/DSC02584.jpg">
             <div class="gallery-item-label">Gerbera</div>
           </div>
 
@@ -186,18 +222,24 @@
           <a href="index.html" class="logo" aria-label="Sri Flora Home">
             <img src="logo-light.png" alt="Sri Flora" class="logo-img" style="filter:brightness(0) invert(1);" />
           </a>
-          <p class="footer-tagline">Rooted in nature, driven by excellence. Premium young plants, cut flowers, and pot plants from Kanakapura, Karnataka.</p>
+          <p class="footer-tagline">Rooted in nature, driven by excellence. Premium young plants, cut flowers, and pot
+            plants from Kanakapura, Karnataka.</p>
           <div class="social-row">
-            <a href="https://www.instagram.com/sriflora" class="social-btn" aria-label="Sri Flora on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/918197191101" class="social-btn" aria-label="Sri Flora on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="mailto:admin@sriflora.com" class="social-btn" aria-label="Email Sri Flora"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/sriflora" class="social-btn" aria-label="Sri Flora on Instagram"
+              target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/918197191101" class="social-btn" aria-label="Sri Flora on WhatsApp" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:admin@sriflora.com" class="social-btn" aria-label="Email Sri Flora"><i
+                class="fa-regular fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul role="list">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="index.html#products">Our Products</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#technology">Technology</a></li>
+            <li><a href="index.html#gallery-cards">Gallery</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
@@ -213,11 +255,11 @@
           <h4>Contact Info</h4>
           <div class="footer-contact-item">
             <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
-            <span>+91 81971 91101</span>
+            <a href="https://wa.me/918197191101" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+91 81971 91101</a>
           </div>
           <div class="footer-contact-item">
             <span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
-            <span>admin@sriflora.com</span>
+            <a href="mailto:admin@sriflora.com" style="color: inherit; text-decoration: none;">admin@sriflora.com</a>
           </div>
         </div>
       </div>
@@ -239,9 +281,9 @@
     <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
-  <script src="script.js?v=86"></script>
+  <script src="script.js?v=92"></script>
 </body>
 
 </html>

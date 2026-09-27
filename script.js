@@ -102,6 +102,16 @@ if (mobileProductsToggle && mobileProductsSubmenu) {
   });
 }
 
+// ── Mobile About Sub-menu toggle ──
+const mobileAboutToggle = document.getElementById('mobile-about-toggle');
+const mobileAboutSubmenu = document.getElementById('mobile-about-submenu');
+if (mobileAboutToggle && mobileAboutSubmenu) {
+  mobileAboutToggle.addEventListener('click', () => {
+    mobileAboutToggle.classList.toggle('open');
+    mobileAboutSubmenu.classList.toggle('open');
+  });
+}
+
 // ── Scroll Reveal ──
 // Only hide .reveal elements once JS is confirmed running
 document.documentElement.classList.add('js-reveal-ready');
@@ -164,17 +174,19 @@ if (lightbox) {
   const lightboxCaption = lightbox.querySelector('.lightbox-caption');
   const lightboxClose = lightbox.querySelector('.lightbox-close');
 
-  document.querySelectorAll('.gallery-item').forEach(item => {
+  document.querySelectorAll('.gallery-item, .tech-slide').forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
-      const label = item.querySelector('.gallery-item-label');
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      if (lightboxCaption) {
-        lightboxCaption.textContent = label ? label.textContent : img.alt;
+      const label = item.querySelector('.gallery-item-label, .tech-slide-label');
+      if (img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        if (lightboxCaption) {
+          lightboxCaption.textContent = label ? label.textContent : img.alt;
+        }
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
       }
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
     });
   });
 

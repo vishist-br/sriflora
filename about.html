@@ -9,7 +9,7 @@
     content="Learn about Sri Flora's mission, vision, our story — from a humble mango nursery to a leading floriculture company in South India. Meet our passionate team." />
   <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://sriflora.in/about.html" />
-  <link rel="stylesheet" href="styles.css?v=88" />
+  <link rel="stylesheet" href="styles.css?v=92" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     /* ── About Page Specific ── */
@@ -18,7 +18,11 @@
       padding: 160px 0 80px;
       text-align: center;
     }
-    .about-page-hero .section-label { color: var(--gold-light); }
+
+    .about-page-hero .section-label {
+      color: var(--gold-light);
+    }
+
     .about-page-hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.2rem, 5vw, 3.5rem);
@@ -27,9 +31,13 @@
       line-height: 1.2;
       margin-bottom: 20px;
     }
-    .about-page-hero h1 span { color: var(--gold-accent); }
+
+    .about-page-hero h1 span {
+      color: var(--gold-accent);
+    }
+
     .about-page-hero p {
-      color: rgba(255,255,255,0.82);
+      color: rgba(255, 255, 255, 0.82);
       font-size: 1.1rem;
       max-width: 680px;
       margin: 0 auto;
@@ -41,43 +49,51 @@
       padding: 100px 0;
       background: var(--white);
     }
+
     .mv-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 48px;
       margin-top: 56px;
     }
+
     .mv-card {
       padding: 48px 40px;
       border-radius: var(--radius-lg);
       position: relative;
       overflow: hidden;
     }
+
     .mv-card.mission {
-      background: linear-gradient(135deg, var(--purple-brand) 0%, var(--purple-deep) 100%);
+      background: var(--slate-dark);
       color: var(--white);
     }
+
     .mv-card.vision {
-      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-accent) 100%);
+      background: var(--slate-dark);
       color: var(--white);
     }
+
     .mv-card-icon {
       font-size: 3rem;
       margin-bottom: 24px;
       display: block;
     }
+
     .mv-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 16px;
-      color: rgba(255,255,255,0.95);
+      color: rgba(255, 255, 255, 0.95);
     }
+
     .mv-card p {
       font-size: 1rem;
       line-height: 1.8;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255, 255, 255, 0.88);
     }
+
     .mv-card::before {
       content: '';
       position: absolute;
@@ -86,7 +102,7 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
     }
 
     /* Our Story */
@@ -94,11 +110,13 @@
       padding: 100px 0;
       background: var(--lavender-bg);
     }
+
     .story-timeline {
       position: relative;
       max-width: 880px;
       margin: 56px auto 0;
     }
+
     .story-timeline::before {
       content: '';
       position: absolute;
@@ -109,13 +127,18 @@
       background: linear-gradient(to bottom, var(--purple-brand), var(--gold-accent));
       transform: translateX(-50%);
     }
+
     .story-block {
       display: grid;
       grid-template-columns: 1fr 60px 1fr;
       align-items: start;
       margin-bottom: 60px;
     }
-    .story-block:last-child { margin-bottom: 0; }
+
+    .story-block:last-child {
+      margin-bottom: 0;
+    }
+
     .story-block-dot {
       width: 20px;
       height: 20px;
@@ -127,6 +150,7 @@
       position: relative;
       top: 4px;
     }
+
     .story-content {
       background: var(--white);
       border-radius: var(--radius-md);
@@ -134,11 +158,27 @@
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-light);
     }
-    .story-content.right { grid-column: 3; }
-    .story-content.left  { grid-column: 1; }
-    .story-dot-col       { grid-column: 2; }
-    .story-block-empty   { grid-column: 1; }
-    .story-block-empty-r { grid-column: 3; }
+
+    .story-content.right {
+      grid-column: 3;
+    }
+
+    .story-content.left {
+      grid-column: 1;
+    }
+
+    .story-dot-col {
+      grid-column: 2;
+    }
+
+    .story-block-empty {
+      grid-column: 1;
+    }
+
+    .story-block-empty-r {
+      grid-column: 3;
+    }
+
     .story-content h4 {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
@@ -146,6 +186,7 @@
       color: var(--purple-brand);
       margin-bottom: 8px;
     }
+
     .story-content p {
       font-size: 0.92rem;
       color: var(--text-body);
@@ -157,6 +198,7 @@
       max-width: 800px;
       margin: 0 auto;
     }
+
     .story-prose p {
       font-size: 1.05rem;
       color: var(--text-body);
@@ -169,12 +211,14 @@
       padding: 100px 0;
       background: var(--white);
     }
+
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 28px;
       margin-top: 56px;
     }
+
     .team-card {
       background: var(--warm-gray);
       border-radius: var(--radius-md);
@@ -185,17 +229,28 @@
       position: relative;
       overflow: hidden;
     }
+
     .team-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 4px;
       background: linear-gradient(90deg, var(--purple-brand), var(--gold-accent));
       transform: scaleX(0);
       transition: transform 0.35s ease;
     }
-    .team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-    .team-card:hover::before { transform: scaleX(1); }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .team-card:hover::before {
+      transform: scaleX(1);
+    }
+
     .team-avatar {
       width: 80px;
       height: 80px;
@@ -211,6 +266,7 @@
       margin: 0 auto 18px;
       box-shadow: 0 4px 16px rgba(106, 0, 87, 0.25);
     }
+
     .team-card h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.05rem;
@@ -218,12 +274,14 @@
       color: var(--slate-dark);
       margin-bottom: 6px;
     }
+
     .team-card p {
       font-size: 0.82rem;
       color: var(--text-muted);
       font-weight: 500;
       letter-spacing: 0.03em;
     }
+
     .team-card .team-role-badge {
       display: inline-block;
       background: var(--purple-light);
@@ -238,24 +296,36 @@
     }
 
     @media (max-width: 768px) {
-      .mv-grid { grid-template-columns: 1fr; }
-      .story-timeline::before { display: none; }
+      .mv-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-timeline::before {
+        display: none;
+      }
+
       .story-block {
         grid-template-columns: 1fr;
         margin-bottom: 28px;
       }
+
       .story-content.right,
-      .story-content.left { grid-column: 1; }
+      .story-content.left {
+        grid-column: 1;
+      }
+
       .story-dot-col,
       .story-block-empty,
-      .story-block-empty-r { display: none; }
+      .story-block-empty-r {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  
+
 
   <!-- ══ NAVBAR ══ -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
@@ -276,6 +346,7 @@
           </ul>
         </li>
         <li><a href="index.html#technology">Technology</a></li>
+        <li><a href="index.html#gallery-cards">Gallery</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:12px;">
@@ -289,7 +360,16 @@
 
   <!-- Mobile Nav Drawer -->
   <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
-    <a href="about.html">About</a>
+    <div class="mobile-nav-group">
+      <button class="mobile-nav-group-toggle" id="mobile-about-toggle">
+        About <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="mobile-nav-submenu" id="mobile-about-submenu">
+        <a href="about.html#mission-vision">Mission & Vision</a>
+        <a href="about.html#our-story">Our Story</a>
+        <a href="about.html#our-team">Our Team</a>
+      </div>
+    </div>
     <div class="mobile-nav-group">
       <button class="mobile-nav-group-toggle" id="mobile-products-toggle">
         Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
@@ -301,6 +381,7 @@
       </div>
     </div>
     <a href="index.html#technology">Technology</a>
+    <a href="index.html#gallery-cards">Gallery</a>
     <a href="index.html#contact">Contact</a>
     <a href="index.html#contact" class="btn-nav">Get In Touch</a>
   </div>
@@ -315,7 +396,6 @@
       </div>
       <span class="section-label">Our Identity</span>
       <h1>Rooted in Nature.<br><span>Driven by Excellence.</span></h1>
-      <p>At Sri Flora, we believe that everything begins with nature — and from every bloom comes new possibilities.</p>
     </div>
   </section>
 
@@ -323,21 +403,12 @@
   <section id="mission-vision" aria-labelledby="mv-heading">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Mission &amp; Vision</span>
-        <h2 class="section-title" id="mv-heading">What Drives Us</h2>
+        <span class="section-label">What Drives Us</span>
+        <h2 class="section-title" id="mv-heading">Mission and Vision</h2>
         <div class="gold-line"></div>
       </div>
-      <div class="mv-grid stagger-children">
-        <div class="mv-card mission">
-          <span class="mv-card-icon">🎯</span>
-          <h3>Our Mission</h3>
-          <p>We work with trusted international breeding and plant companies to bring promising varieties and quality genetics to the Indian market, while combining global knowledge with our understanding of Indian growing conditions. From the first root to the final bloom, every step matters.</p>
-        </div>
-        <div class="mv-card vision">
-          <span class="mv-card-icon">🌟</span>
-          <h3>Our Vision</h3>
-          <p>To provide growers with high-quality planting material, beautiful ornamental plants, and vibrant cut flowers that bring life, colour, and beauty to every environment they touch. Because when nature is at the heart of what we do, excellence becomes the way we grow.</p>
-        </div>
+      <div class="story-prose reveal">
+        <p>Our vision is simple to provide growers with high-quality planting material, beautiful ornamental plants, and vibrant cut flowers that bring life, colour, and beauty to every environment they touch. We work with trusted international breeding and plant companies to bring promising varieties and quality genetics to the Indian market, while combining global knowledge with our understanding of Indian growing conditions. From the first root to the final bloom, every step matters. Because when nature is at the heart of what we do, excellence becomes the way we grow.</p>
       </div>
     </div>
   </section>
@@ -352,12 +423,30 @@
       </div>
 
       <div class="story-prose reveal">
-        <p>Sri Flora is built on a legacy of agricultural experience, entrepreneurial vision, and a deep understanding of plants. Our journey began with our founder Dr. H. K. Srikanta, an agricultural graduate who started with a humble nursery focused on producing quality grafted mango plants. What began as a small venture soon grew through a simple principle that continues to guide us today — quality creates trust, and trust creates growth.</p>
-        <p>As the nursery gained recognition, Dr. Srikanta ventured into the seed industry and established Cee Kay Seeds &amp; Seedlings, supplying quality vegetable seeds to farmers across India. The company's emphasis on quality and innovation led to a collaboration with Daenfeldt, Denmark, to establish an R&amp;D unit, with the resulting seed material eventually being exported to European markets.</p>
-        <p>With a growing understanding of crops, cultivation and protected agriculture, the journey naturally expanded into cut flowers. Greenhouses were established to cultivate vibrant, high-quality flowers for the Indian market, further strengthening the family's expertise in modern floriculture and protected cultivation.</p>
-        <p>In 2019, after completing his Bachelor's degree in Agriculture, Varun Gowda, Dr. Srikanta's son, joined his father to take the journey forward. Together, they established a plant production unit with a clear focus on high-quality young plants and dependable, timely supply. Their combined experience in agriculture, propagation and commercial cultivation created the foundation for the next phase of growth.</p>
-        <p>The changing landscape of horticulture after COVID-19 revealed an emerging opportunity in ornamental plants. With increasing interest in plants and green spaces, the vision evolved beyond supplying growers to creating a larger ecosystem of quality ornamental plants for plant lovers across South India.</p>
-        <p>Today, that vision is taking another step forward. Building on years of practical experience and a pilot tissue culture project that has been developed over the past four years, Sri Flora is now moving towards establishing a dedicated tissue culture laboratory at its farm. From a humble mango nursery to seeds, from flowers to young plants, and now towards tissue culture and ornamentals — Sri Flora continues to grow by combining experience with innovation.</p>
+        <p>Sri Flora is built on a legacy of agricultural experience, entrepreneurial vision, and a deep understanding
+          of plants. Our journey began with our founder Dr. H. K. Srikanta, an agricultural graduate who started with a
+          humble nursery focused on producing quality grafted mango plants. What began as a small venture soon grew
+          through a simple principle that continues to guide us today — quality creates trust, and trust creates growth.
+        </p>
+        <p>As the nursery gained recognition, Dr. Srikanta ventured into the seed industry and established Cee Kay Seeds
+          &amp; Seedlings, supplying quality vegetable seeds to farmers across India. The company's emphasis on quality
+          and innovation led to a collaboration with Daenfeldt, Denmark, to establish an R&amp;D unit, with the
+          resulting seed material eventually being exported to European markets.</p>
+        <p>With a growing understanding of crops, cultivation and protected agriculture, the journey naturally expanded
+          into cut flowers. Greenhouses were established to cultivate vibrant, high-quality flowers for the Indian
+          market, further strengthening the family's expertise in modern floriculture and protected cultivation.</p>
+        <p>In 2019, after completing his Bachelor's degree in Agriculture, Varun Gowda, Dr. Srikanta's son, joined his
+          father to take the journey forward. Together, they established a plant production unit with a clear focus on
+          high-quality young plants and dependable, timely supply. Their combined experience in agriculture, propagation
+          and commercial cultivation created the foundation for the next phase of growth.</p>
+        <p>The changing landscape of horticulture after COVID-19 revealed an emerging opportunity in ornamental plants.
+          With increasing interest in plants and green spaces, the vision evolved beyond supplying growers to creating a
+          larger ecosystem of quality ornamental plants for plant lovers across South India.</p>
+        <p>Today, that vision is taking another step forward. Building on years of practical experience and a pilot
+          tissue culture project that has been developed over the past four years, Sri Flora is now moving towards
+          establishing a dedicated tissue culture laboratory at its farm. From a humble mango nursery to seeds, from
+          flowers to young plants, and now towards tissue culture and ornamentals — Sri Flora continues to grow by
+          combining experience with innovation.</p>
       </div>
     </div>
   </section>
@@ -450,19 +539,24 @@
           <a href="index.html" class="logo" aria-label="Sri Flora Home">
             <img src="logo-light.png" alt="Sri Flora" class="logo-img" style="filter:brightness(0) invert(1);" />
           </a>
-          <p class="footer-tagline">Rooted in nature, driven by excellence. Premium young plants, cut flowers, and pot plants from Kanakapura, Karnataka.</p>
+          <p class="footer-tagline">Rooted in nature, driven by excellence. Premium young plants, cut flowers, and pot
+            plants from Kanakapura, Karnataka.</p>
           <div class="social-row">
-            <a href="https://www.instagram.com/sriflora" class="social-btn" aria-label="Sri Flora on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-            <a href="https://wa.me/918197191101" class="social-btn" aria-label="Sri Flora on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="mailto:admin@sriflora.com" class="social-btn" aria-label="Email Sri Flora"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/sriflora" class="social-btn" aria-label="Sri Flora on Instagram"
+              target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/918197191101" class="social-btn" aria-label="Sri Flora on WhatsApp" target="_blank"
+              rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:admin@sriflora.com" class="social-btn" aria-label="Email Sri Flora"><i
+                class="fa-regular fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul role="list">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="index.html#products">Our Products</a></li>
-            <li><a href="index.html#technology">Our Technology</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="index.html#technology">Technology</a></li>
+            <li><a href="index.html#gallery-cards">Gallery</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
@@ -482,11 +576,11 @@
           </div>
           <div class="footer-contact-item">
             <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
-            <span>+91 81971 91101</span>
+            <a href="https://wa.me/918197191101" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">+91 81971 91101</a>
           </div>
           <div class="footer-contact-item">
             <span><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
-            <span>admin@sriflora.com</span>
+            <a href="mailto:admin@sriflora.com" style="color: inherit; text-decoration: none;">admin@sriflora.com</a>
           </div>
         </div>
       </div>
@@ -509,9 +603,9 @@
     <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </a>
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
-  <script src="script.js?v=86"></script>
+  <script src="script.js?v=92"></script>
 </body>
 
 </html>
