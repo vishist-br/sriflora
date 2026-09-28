@@ -599,12 +599,10 @@ ul {
 }
 
 .hero-logo-img {
-  /* White-only version: strip all color, leave luminance, make bright white */
   width: clamp(220px, 45vw, 380px);
   height: auto;
   object-fit: contain;
-  /* Convert purple text to white; gold leaf also lightens beautifully */
-  filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(0 0 24px rgba(0, 0, 0, 0.35));
 }
 
 .hero-tagline {
@@ -1189,7 +1187,7 @@ ul {
 ══════════════════════════════ */
 #contact {
   padding: 120px 0;
-  background: var(--white);
+  background: var(--lavender-bg);
 }
 
 .contact-grid {
@@ -2414,7 +2412,7 @@ footer .container {
 ══════════════════════════════ */
 #gallery-cards {
   padding: 120px 0;
-  background: var(--lavender-bg);
+  background: var(--white);
 }
 
 .gallery-cards-grid {
