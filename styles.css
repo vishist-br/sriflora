@@ -2617,11 +2617,13 @@ footer .container {
   box-shadow: var(--shadow-lg);
 }
 
-.video-card video {
+.video-card video,
+.video-card iframe {
   width: 100%;
   aspect-ratio: 16/9;
   background: #000;
   display: block;
+  border: none;
 }
 
 .video-card-body {
