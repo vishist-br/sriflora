@@ -101,11 +101,11 @@
 
   <!-- ══ HERO ══ -->
   <section id="hero" aria-label="Hero section">
-    <!-- YouTube Video Background -->
-    <div class="hero-video-bg" id="hero-video-bg">
-      <div id="yt-player"></div>
-      <!-- Transparent blocker: absorbs hover so YouTube controls never appear -->
-      <div class="yt-blocker"></div>
+    <!-- Native Video Background -->
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="auto" class="hero-video">
+        <source src="photos/SF.mp4" type="video/mp4">
+      </video>
     </div>
     <!-- Dark Overlay -->
     <div class="hero-overlay"></div>
@@ -517,59 +517,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
-  <!-- YouTube IFrame API for Hero Background -->
-  <script>
-    // Load YouTube IFrame API
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var ytPlayer;
-    function onYouTubeIframeAPIReady() {
-      ytPlayer = new YT.Player('yt-player', {
-        videoId: 'o4yvLsSnIYU',
-        playerVars: {
-          autoplay: 1,
-          mute: 1,
-          loop: 1,
-          playlist: 'o4yvLsSnIYU',
-          controls: 0,
-          showinfo: 0,
-          rel: 0,
-          iv_load_policy: 3,
-          modestbranding: 1,
-          playsinline: 1,
-          disablekb: 1,
-          enablejsapi: 1,
-          origin: window.location.origin
-        },
-        events: {
-          'onReady': function(e) {
-            e.target.mute();
-            e.target.playVideo();
-          },
-          'onStateChange': function(e) {
-            // Fade in the video only AFTER it starts actually playing
-            // This hides the initial controls flash completely
-            if (e.data === YT.PlayerState.PLAYING) {
-              var iframe = document.querySelector('#yt-player iframe');
-              if (iframe) {
-                iframe.style.opacity = '1';
-              }
-              // Also fade in via the container if iframe not yet replaced
-              var playerDiv = document.getElementById('yt-player');
-              if (playerDiv) playerDiv.style.opacity = '1';
-            }
-            if (e.data === YT.PlayerState.ENDED) {
-              e.target.playVideo();
-            }
-          }
-        }
-      });
-    }
-  </script>
-  <script src="script.js?v=93"></script>
+  <script src="script.js?v=94"></script>
 </body>
 
 </html>

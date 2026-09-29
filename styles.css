@@ -555,7 +555,7 @@ ul {
   text-align: center;
 }
 
-/* ── YouTube Video Background ── */
+/* ── Native Video Background ── */
 .hero-video-bg {
   position: absolute;
   inset: 0;
@@ -564,27 +564,17 @@ ul {
   background: #1a0014; /* Fallback while video loads */
 }
 
-/* Transparent div that sits on top of iframe and eats all mouse events */
-.yt-blocker {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: transparent;
-  cursor: default;
-}
-
-.hero-video-bg #yt-player {
+.hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 56.25vw; /* 16:9 ratio */
-  min-height: 100vh;
-  min-width: 177.78vh; /* 16:9 ratio */
-  transform: translate(-50%, -50%) scale(1.15);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
   pointer-events: none;
-  opacity: 0;
-  transition: opacity 1s ease;
 }
 
 .hero-overlay {
