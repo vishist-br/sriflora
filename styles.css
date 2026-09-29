@@ -555,32 +555,50 @@ ul {
   text-align: center;
 }
 
-.hero-bg {
+/* ── YouTube Video Background ── */
+.hero-video-bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(160deg,
-      rgba(106, 0, 87, 0.6) 0%,
-      rgba(77, 0, 63, 0.55) 40%,
-      rgba(48, 0, 40, 0.70) 100%
-    ),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80') center/cover no-repeat;
-  transform: scale(1.05);
-  transition: transform 8s ease;
+  z-index: 0;
+  overflow: hidden;
+  background: #1a0014; /* Fallback while video loads */
 }
 
-/* Dark mode hero — boost purple so background doesn't look black */
-[data-theme="dark"] .hero-bg {
-  background:
-    linear-gradient(160deg,
-      rgba(106, 0, 87, 0.75) 0%,
-      rgba(77, 0, 63, 0.72) 45%,
-      rgba(48, 0, 40, 0.80) 100%
-    ),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80') center/cover no-repeat;
+/* Transparent div that sits on top of iframe and eats all mouse events */
+.yt-blocker {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: transparent;
+  cursor: default;
 }
 
-#hero:hover .hero-bg {
-  transform: scale(1.0);
+.hero-video-bg #yt-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 ratio */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 16:9 ratio */
+  transform: translate(-50%, -50%) scale(1.15);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    160deg,
+    rgba(80, 0, 65, 0.38) 0%,
+    rgba(50, 0, 40, 0.30) 40%,
+    rgba(20, 0, 20, 0.45) 100%
+  );
+}
+
 
 .hero-content {
   position: relative;
